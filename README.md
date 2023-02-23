@@ -7,3 +7,6 @@ _It's not finnished, but for this moment you may run it using this steps:_
 ``` export DJANGO_SECRET_KEY=<your_value>```
 * Run server:
 ``` python manage.py runserver```
+* Now you can see two pages:
+_/catalog/ page and /admin/ page_
+

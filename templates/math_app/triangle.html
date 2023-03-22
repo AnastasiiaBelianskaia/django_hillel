@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Triangle</title>
+</head>
+<body>
+
+<form action="{% url 'math_app:triangle' %}" method="get">
+    {{ values_form.as_p }}
+    <input type="submit" name="submit" value="Submit">
+</form>
+
+{% if cath_x and cath_y and hypotenuse %}
+ <h1>Your result:</h1>
+ <ul>
+     <li>
+         <p>if cathetus x = {{ cath_x }} cm</p>
+     </li>
+
+     <li>
+         <p>and cathetus y = {{ cath_y }} cm</p>
+     </li>
+
+     <li>
+         <p> then hypotenuse = {{ hypotenuse }} cm</p>
+     </li>
+ </ul>
+{% endif %}
+</body>
+</html>

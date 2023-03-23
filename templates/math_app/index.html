@@ -5,9 +5,12 @@
     <title>Triangle</title>
 </head>
 <body>
- <h1>Hi, do you want to find the length of the hypotenuse?</h1>
- <p>
-     <a href="{% url 'math_app:triangle' %}">Find</a>
- </p>
+ <h1>Main page</h1>
+
+ <p> Go to register page:</p><br>
+ <a href="{% url 'math_app:create_entry' %}">Register</a>
+
+ <p>Find the length of the hypotenuse?</p><br>
+ <a href="{% url 'math_app:triangle' %}">Find</a>
 </body>
 </html>

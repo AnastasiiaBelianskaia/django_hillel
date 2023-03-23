@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <h1> Edit {{ user_instance }} info </h1>
+ <form action="{% url 'math_app:edit_entry' pk=user_instance.id %}" method="post">
+    {% csrf_token %}
+     <table border="3">
+        {{ user_edit_form.as_table }}
+     </table>
+    <input type="submit" name="submit" value="Submit">
+ </form>
+</body>
+</html>

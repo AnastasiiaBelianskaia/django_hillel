@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail page</title>
+</head>
+<body>
+  <a href="{% url 'math_app:index' %}">Go to main page</a>
+
+  <span>All registered users:</span>
+  <ul>
+    {% for user in all_users %}
+      <li><a href="{% url 'math_app:user_details' pk=user.id %}">{{ user }}</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

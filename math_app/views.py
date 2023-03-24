@@ -59,3 +59,11 @@ def all_users_list(request):
 def user_details(request, pk):
     user = get_object_or_404(PersonModel, id=pk)
     return render(request, 'math_app/user_details.html', {'user': user})
+
+
+def user_delete(request, pk):
+    user = get_object_or_404(PersonModel, id=pk)
+    if request.method == 'POST':
+        user.delete()
+        return redirect('math_app:all_users')
+    return render(request, 'math_app/delete_user_page.html', {'user': user})

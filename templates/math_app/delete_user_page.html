@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+</head>
+<body>
+  <span>Confirm the deletion?</span>
+  <form action="{% url 'math_app:delete_user' pk=user.id %}" method="post">
+      {% csrf_token %}
+      <input type="submit", value="Confirm">
+      <a href="{% url 'math_app:index' %}">Cancel and go to main page</a>
+  </form>
+</body>
+</html>

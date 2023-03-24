@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+  <span>Details for {{ user.first_name }}</span>
+  <ul>
+      <li>First name: {{ user.first_name }} </li>
+      <li>Last name: {{ user.last_name }}</li>
+      <li>Email: {{ user.email }}</li>
+  </ul>
+
+  <a href="{% url 'math_app:index' %}">Go to main page</a>
+  <a href="{% url 'math_app:edit_entry' pk=user.id %}">Edit your account info</a>
+</body>
+</html>
